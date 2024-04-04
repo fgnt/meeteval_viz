@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Overview</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin:    0 auto;
+            max-width: 70em;
+        }
+
+        a.card {
+            color: unset;
+            text-decoration: unset;
+        }
+
+
+        /* Card style for an example visualization*/
+        .card {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            display: inline-block;
+            border-radius: 10px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .card h3 {
+            text-align: center;
+        }
+
+        /* Highlight on hover in blue */
+        .card:hover {
+            background-color: lightblue;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 1px solid gray;
+        }
+
+        .example-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 20em);
+            grid-auto-flow: dense;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>MeetEval alignment visualization tool</h1>
+    <p> This tool visualizes word sequence alignments to facilitate spotting of errors in conversational ASR transcription</p>
+
+    <h2>Examples</h2>
+    <!-- Example card. Contains a title, a screenshot and a short summary. -->
+    <div class="example-grid">
+    <a class="card" href="https://groups.upb.de/nt/meeteval/i24/poster_example.html?selection=188.8-198.9&minimaps=1"">
+        <h3>Poster example</h3>
+        <img src="images/example-1.png" alt="Example screenshot">
+        <p>The example displayed on the poster presented at ICASSP 2024 Show&Tell.</p>
+    </a>
+    <a class="card" href="https://groups.uni-paderborn.de/nt/meeteval/icassp2024-demo/libricss_diarization/overlap_ratio_40.0_sil0.1_1.0_session8_actual40.5_System_tcp.html?selection=213.9-220.5">
+        <h3>LibriCSS Diarization</h3>
+        <img src="images/libricss.png" alt="Example screenshot">
+        <p>A high-overlap (OV40) example from the LibriCSS dataset.</p>
+    </a>
+    <a class="card" href="https://groups.upb.de/nt/meeteval/i24/S28_pb_tcp.html?selection=235-243">
+        <h3>DiPCo Diarization</h3>
+        <img src="images/dipco.png" alt="Example screenshot">
+        <p>Diarization performed on the DiPCo dataset, Paderborn's submission to the 7th CHiME challenge.</p>
+    </a>
+    <a class="card" href="https://groups.upb.de/nt/meeteval/i24/sbs.html?S28_ntt_tcp&S28_pb_tcp">
+        <h3>Side-by-side System Comparison</h3>
+        <img src="images/side-by-side.png" alt="Example screenshot">
+        <p>Two synchronized vizualizations to compoare different systems. Here: NTT's and Paderborn's submissions to the 7th CHiME challenge. DiPCO dataset.</p>
+    </a>
+    <a class="card" href="https://groups.upb.de/nt/meeteval/i24/sbs.html?S28_pb_tcp&S28_pb_cp">
+        <h3>Side-by-side tcp vs cp</h3>
+        <img src="images/side-by-side.png" alt="Example screenshot">
+        <p>Compare the tcp alignment (with time constraint) with the cp alignment (without time constraint).</p>
+    </a>
+    <a class="card" href="https://fgnt.github.io/meeteval_jupyterlite/lab?path=Demo.ipynb">
+        <h3>JupyterLite Notebook</h3>
+        <img src="images/jupyterlite.png" alt="JupyterLite screenshot">
+        <p>The JupyterLite notebook that generates the visualization in the browser. Run it with you own data, no install required!</p>
+    </a>
+    </div>
+</body>
+</html>
